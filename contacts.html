@@ -15,7 +15,7 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" />
   <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500&display=swap" rel="stylesheet">
   <link href="fcf-assets/css/fcf.default.css" rel="stylesheet">
-
+  <link href="contact-form.css" rel="stylesheet">
   <link rel="preconnect" href="https://fonts.gstatic.com" />
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet" />
 
@@ -56,34 +56,25 @@
       <div class="row d-flex justify-content-center">
         <div class="col-md-6">
           <div>
-            <form class="fcf-form-class" id="freeversion" method="post" action="./fcf-assets/fcf.process.php">
-
-              <div class="field">
-                  <label for="Name" class="label has-text-weight-normal">Your name</label>
-                  <div class="control">
-                      <input type="text" name="Name" id="Name" class="input is-full-width" maxlength="100"
-                          data-validate-field="Name">
-                  </div>
+            <form class="p-3 p-xl-4" data-bs-theme="dark" id="fcf-form-id" class="fcf-form-class" method="post" action="./assets/bootstrap/css/contact-form-process.php">
+        
+              <div class="fcf-form-group">
+                  <label for="Name" class="fcf-label">Name</label>
+                  <div class="mb-3"><input class="shadow form-control" type="text" id="name-1" name="name" required></div>
               </div>
-              <div class="field">
-                  <label for="Email" class="label has-text-weight-normal">Your email address</label>
-                  <div class="control">
-                      <input type="email" name="Email" id="Email" class="input is-full-width" maxlength="100"
-                          data-validate-field="Email">
-                  </div>
+      
+              <div class="fcf-form-group">
+                  <label for="Email" class="fcf-label">E-mail</label>
+                  <div class="mb-3"><input class="shadow form-control" type="email" id="email-1" name="email" required></div>
               </div>
-              <div class="field">
-                  <label for="Message" class="label has-text-weight-normal">Your message</label>
-                  <div class="control">
-                      <textarea name="Message" id="Message" class="textarea" maxlength="3000" rows="5" 
-                      data-validate-field="Message"></textarea>
-                  </div>
+      
+              <div class="fcf-form-group">
+                  <label for="Message" class="fcf-label">Message</label>
+                  <div class="mb-3"><textarea class="shadow form-control" id="message-1" name="Message" rows="6" maxlength="3000" required></textarea></div>
               </div>
-              <div id="fcf-status" class="fcf-status"></div>
-              <div class="field">
-                  <div class="buttons">
-                      <button id="fcf-button" type="submit" class="button is-link is-medium">Send Message</button>
-                  </div>
+      
+              <div class="fcf-form-group">
+                <a class="btn-grad btn-primary shadow" role="button" type="submit">Send Message</a>
               </div>
             </form>
           </div>

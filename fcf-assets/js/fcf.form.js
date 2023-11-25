@@ -102,7 +102,7 @@ function showDebugMessage(message) {
 // Please purchase a pro license for credit removal rights
 var creditcontainer = document.querySelector(".buttons");
 var creditdiv = document.createElement('div');
-creditdiv.innerHTML = '<div class="field" style="font-size:0.9em;color:#aaa;padding-top:15px;padding-bottom:10px">Free contact form by <a href="https://www.majesticform.com" style="font-size:0.9em;color:#aaa;text-decoration:none" target="_blank">MajesticForm</a>.</div>';
+creditdiv.innerHTML = '<div class="field" style="font-size:0.9em;color:#aaa;padding-top:15px;padding-bottom:10px"></div>';
 creditcontainer.parentNode.insertAdjacentElement('afterend', creditdiv);
 
 

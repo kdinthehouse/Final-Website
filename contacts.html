@@ -14,7 +14,7 @@
   <link rel="stylesheet" href="./assets/bootstrap/css/faq.css">
   <link rel="preconnect" href="https://fonts.gstatic.com" />
   <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500&display=swap" rel="stylesheet">
-  <link href="fcf-assets/css/fcf.default.css" rel="stylesheet">
+
   <link href="contact-form.css" rel="stylesheet">
   <link rel="preconnect" href="https://fonts.gstatic.com" />
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet" />
@@ -56,37 +56,18 @@
       <div class="row d-flex justify-content-center">
         <div class="col-md-6">
           <div>
-            <form class="p-3 p-xl-4" data-bs-theme="dark" id="fcf-form-id" class="fcf-form-class" method="post" action="./assets/bootstrap/css/contact-form-process.php">
-        
-              <div class="fcf-form-group">
-                  <label for="Name" class="fcf-label">Name</label>
-                  <div class="mb-3"><input class="shadow form-control" type="text" id="name-1" name="name" required></div>
-              </div>
-      
-              <div class="fcf-form-group">
-                  <label for="Email" class="fcf-label">E-mail</label>
-                  <div class="mb-3"><input class="shadow form-control" type="email" id="email-1" name="email" required></div>
-              </div>
-      
-              <div class="fcf-form-group">
-                  <label for="Message" class="fcf-label">Message</label>
-                  <div class="mb-3"><textarea class="shadow form-control" id="message-1" name="Message" rows="6" maxlength="3000" required></textarea></div>
-              </div>
-      
-              <div class="fcf-form-group">
-                <a class="btn-grad btn-primary shadow" role="button" type="submit">Send Message</a>
-              </div>
+            <form class="p-3 p-xl-4" action="send-message.php" method="POST" data-bs-theme="dark">
+
+                <div class="mb-3"><input class="shadow form-control" type="text" id="name" name="name" placeholder="Name" required></div>
+                <div class="mb-3"><input class="shadow form-control" type="email" id="email" name="email" placeholder="Email" required></div>
+                <div class="mb-3"><textarea class="shadow form-control" id="message" name="message" rows="6" placeholder="Message"></textarea></div>
+                <a class="btn-grad btn-primary shadow" type="submit" role="button">Send Message</a>
             </form>
-          </div>
-          <div id="fcf-thank-you" style="display:none">
-            <!-- Thank you message goes below -->
-            <strong>Thank you</strong>
-            <p>Thanks for contacting us, we will get back in touch with you soon.</p>
-            <!-- Thank you message goes above -->
           </div>
         </div>
       </div>
     </section>
+    
     <section class="py-4 py-xl-5 mb-5">
       <div class="row mb-2">
         <div class="col-md-8 col-xl-6 text-center mx-auto">
@@ -224,8 +205,9 @@
 <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.3.2/CSSRulePlugin.min.js"></script> -->
     <script type="module" src="./assets/bootstrap/js/orb.js"></script>
     <script src="./assets/bootstrap/js/faq.js"></script>
-    <script src="fcf-assets/js/fcf.just-validate.min.js"></script>
-    <script src="fcf-assets/js/fcf.form.js"></script>
+
+
+    <script src="//cdnjs.cloudflare.com/ajax/libs/validate.js/0.13.1/validate.min.js"></script>
 </body>
 
 </html>

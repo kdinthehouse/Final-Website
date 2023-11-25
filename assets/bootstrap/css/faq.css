@@ -100,7 +100,6 @@
 .accordion .accordion-content {
   opacity: 0;
   max-height: 0;
-  overflow: hidden;
   transition: opacity 200ms linear, max-height 200ms linear;
   will-change: opacity, max-height;
 }

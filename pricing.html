@@ -64,7 +64,7 @@
                 </div>
 
                 <div class="row gy-4 row-cols-1 row-cols-md-2 row-cols-lg-3">
-                    <div class="col">
+                    <div class="col" id="section1">
                         <div class="card border-0 h-100">
                             <div class="card-body d-flex flex-column justify-content-between p-4">
                                 <div>
@@ -99,11 +99,11 @@
                                                     <path d="M5 12l5 5l10 -10"></path>
                                                 </svg></span><span>Porta suscipit netus ad ac.</span></li>
                                     </ul>
-                                </div><a class="btn-grad btn-primary shadow" role="button" href="contacts.html">Buy</a>
+                                </div><a class="btn-grad btn-primary shadow buyButton" role="button" href="contacts.html" data-section="section1">Buy</a>
                             </div>
                         </div>
                     </div>
-                    <div class="col">
+                    <div class="col"  id="section2">
                         <div class="card border-warning border-2 h-100">
                             <div class="card-body d-flex flex-column justify-content-between p-4"><span
                                     class="badge bg-warning position-absolute top-0 end-0 rounded-bottom-left text-uppercase text-primary">Most
@@ -140,11 +140,11 @@
                                                     <path d="M5 12l5 5l10 -10"></path>
                                                 </svg></span><span>Porta suscipit netus ad ac.</span></li>
                                     </ul>
-                                </div><a class="btn-grad btn-primary shadow" role="button" href="contacts.html">Buy</a>
+                                </div><a class="btn-grad btn-primary shadow buyButton" role="button" href="contacts.html" data-section="section2">Buy</a>
                             </div>
                         </div>
                     </div>
-                    <div class="col">
+                    <div class="col" id="section3">
                         <div class="card border-0 h-100">
                             <div class="card-body d-flex flex-column justify-content-between p-4">
                                 <div class="pb-4">
@@ -188,7 +188,7 @@
                                                     <path d="M5 12l5 5l10 -10"></path>
                                                 </svg></span><span>Morbi praesent aptent integer.</span></li>
                                     </ul>
-                                </div><a class="btn-grad btn-primary shadow" role="button" href="contacts.html">Buy</a>
+                                </div><a class="btn-grad btn-primary shadow buyButton" role="button" href="contacts.html" data-section="section3">Buy</a>
                             </div>
                         </div>
                     </div>
@@ -238,7 +238,7 @@
 
             <hr>
             <div class="text-muted d-flex justify-content-between align-items-center pt-3">
-                <p class="mb-0">Copyright © Boostify</p>
+                <p class="mb-0">Copyright © Boostify</p> <p class="mb-0">Developed by @vikxiaz</p>
                 <ul class="list-inline mb-0">
                     <li class="list-inline-item"><a href="#">About Us</a></li>
                     <li class="list-inline-item"><a href="./assets/bootstrap/terms.html">Terms and Conditions</a></li>
@@ -299,6 +299,17 @@
     <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.3.2/gsap.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.3.2/CSSRulePlugin.min.js"></script> -->
     <script type="module" src="./assets/bootstrap/js/orb.js"></script>
+    <script>
+    document.querySelectorAll('.buyButton').forEach(function(button) {
+        button.addEventListener('click', function(event) {
+            event.preventDefault();
+            var sectionId = this.getAttribute('data-section');
+            var sectionContent = document.querySelector('#' + sectionId).innerText;
+            var encodedSectionContent = encodeURIComponent(sectionContent);
+            window.location.href = 'contacts.html?message=' + encodedSectionContent;
+        });
+    });
+    </script>
 </body>
 
 </html>

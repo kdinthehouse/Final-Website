@@ -61,7 +61,7 @@
                 <div class="mb-3"><input class="shadow form-control" type="text" id="name" name="name" placeholder="Name" required></div>
                 <div class="mb-3"><input class="shadow form-control" type="email" id="email" name="email" placeholder="Email" required></div>
                 <div class="mb-3"><textarea class="shadow form-control" id="message" name="message" rows="6" placeholder="Message"></textarea></div>
-                <a class="btn-grad btn-primary shadow" type="submit" role="button">Send Message</a>
+                <a class="btn-grad btn-primary shadow" type="submit" onclick="openMailtoWindow()" role="button">Send Message</a>
             </form>
           </div>
         </div>
@@ -143,7 +143,7 @@
 
         <hr>
         <div class="text-muted d-flex justify-content-between align-items-center pt-3">
-          <p class="mb-0">Copyright © Boostify</p>
+          <p class="mb-0">Copyright © Boostify</p><p class="mb-0">Developed by @vikxiaz</p>
           <ul class="list-inline mb-0">
             <li class="list-inline-item"><a href="#">About Us</a></li>
             <li class="list-inline-item"><a href="./assets/bootstrap/terms.html">Terms and Conditions</a></li>
@@ -208,6 +208,31 @@
 
 
     <script src="//cdnjs.cloudflare.com/ajax/libs/validate.js/0.13.1/validate.min.js"></script>
+	
+	<script>
+  function openMailtoWindow() {
+    const name = document.getElementById('name').value;
+    const email = document.getElementById('email').value;
+    const message = document.getElementById('message').value;
+
+    const mailtoLink = `mailto:recipient-email@example.com?subject=Contact Form Submission&body=${encodeURIComponent(name)}%0D%0A${encodeURIComponent(email)}%0D%0A${encodeURIComponent(message)}`;
+
+
+    window.open(mailtoLink);
+	document.getElementById('name').reset()
+	document.getElementById('email').reset()
+	document.getElementById('message').reset()
+  }
+</script>
+<script>
+window.onload = function() {
+  var url = new URL(window.location.href);
+  var message = url.searchParams.get('message');
+  if (message) {
+      document.querySelector('#message').value = decodeURIComponent(message);
+  }
+};</script>
+
 </body>
 
 </html>

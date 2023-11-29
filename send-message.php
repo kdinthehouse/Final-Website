@@ -6,8 +6,8 @@ if (isset($_POST['name']) && isset($_POST['email']) && isset($_POST['message']))
   $message = $_POST['message'];
 
   // Replace these with your actual email address and recipient email address
-  $senderEmail = "seplu84713@appsamo.com";
-  $recipientEmail = "seplu84713@appsamo.com";
+  $senderEmail = "team@boostifygrowth.tech";
+  $recipientEmail = "team@boostifygrowth.tech";
 
   $subject = "Contact Form Submission";
 
